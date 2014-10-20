@@ -128,6 +128,10 @@ static void lcd_implementation_init()
 			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
 			// Welcome message
 			u8g.setFont(u8g_font_6x10_marlin);
+			//Rapduch
+			u8g.setPrintPos(83,51);
+			u8g.print("v3.0");
+			//----
 			u8g.drawStr(62,10,"BCN3D+");
                         u8g.setFont(u8g_font_5x8);
                         u8g.drawStr(62,25,"by RepRapBCN");
@@ -719,10 +723,11 @@ static void lcd_implementation_quick_feedback()
     SET_OUTPUT(BEEPER);
     for(int8_t i=0;i<10;i++)
     {
-		WRITE(BEEPER,HIGH);
-		delay(3);
-		WRITE(BEEPER,LOW);
-		delay(3);
+		tone(BEEPER, 1200, 50);
+		//WRITE(BEEPER,HIGH);
+		//delay(3);
+		//WRITE(BEEPER,LOW);
+		//delay(3);
     }
 #endif
 }

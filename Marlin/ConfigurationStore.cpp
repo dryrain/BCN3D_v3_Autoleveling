@@ -40,9 +40,9 @@ void _EEPROM_readData(int &pos, uint8_t* value, uint8_t size)
 // wrong data being written to the variables.
 // ALSO:  always make sure the variables in the Store and retrieve sections are in the same order.
 #ifdef DELTA
-#define EEPROM_VERSION "V11"
+#define EEPROM_VERSION "V12"
 #else
-#define EEPROM_VERSION "V10"
+#define EEPROM_VERSION "V11"
 #endif
 
 #ifdef EEPROM_SETTINGS

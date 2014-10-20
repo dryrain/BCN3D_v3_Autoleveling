@@ -8,6 +8,9 @@
 #include "stepper.h"
 #include "ConfigurationStore.h"
 
+//Changes Rapduch
+#include "Hysteresis.h"
+#include "planner.h"
 
 int8_t encoderDiff; /* encoderDiff is updated from interrupt context and added to encoderPosition every LCD update */
 
@@ -60,6 +63,7 @@ static void lcd_control_temperature_menu();
 static void lcd_control_temperature_preheat_pla_settings_menu();
 static void lcd_control_temperature_preheat_abs_settings_menu();
 static void lcd_control_motion_menu();
+static void lcd_hysteresis_menu();
 #ifdef DOGLCD
 static void lcd_set_contrast();
 #endif
